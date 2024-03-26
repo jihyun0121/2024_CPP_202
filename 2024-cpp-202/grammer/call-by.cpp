@@ -14,5 +14,4 @@ int main(void) {
 	call_by_value(&num);
 	cout << num;
 	return 0;
-
 }
