@@ -7,5 +7,5 @@ int main(void) {
 	char str[4] = "abc";
 
 	printf("%d / %d\n", &arr[0], &arr[1]);
-	printf("%d / %d", &str[0], &str[1]);
+	printf("%d / %d", arr+0, arr+1);
 }
