@@ -6,7 +6,7 @@ using namespace std;
 void call_by_reference(int* val)
 {
     //새로운 지역변수 val을 만들고 val가 가리키고 있는 대상의 값을 바꾼다.
-    *al = 10;
+    *val = 10;
 }
 int main(void)
 {
