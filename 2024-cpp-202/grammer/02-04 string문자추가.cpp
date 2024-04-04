@@ -1,9 +1,11 @@
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 int main(void) {
-    String str = "c";
-    strcat(str, "addition");
+    string str = "c++";
+    str += "addition";
 
-    printf("%s ", str);
+    cout << str;
 }
