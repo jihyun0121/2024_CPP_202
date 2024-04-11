@@ -40,11 +40,14 @@ private:
     int hakbun_;
     string name_;
 };
-s
+
 int main(void) {
-    Student jisu = Student(2202, "나지수");
+    //동적할당 : 메모리는 heap에서 할당
+    Student* jisu = new Student(2202, "나지수");
+    //정적할당 : 메모리는 Stack에서 할당
     Student mirim = Student();
-    jisu.show();
+
+    (*jisu).show();
     mirim.show();
     return 0;
 }
