@@ -34,7 +34,7 @@ public:
 
     //클래스의 멤버를 출력
     void show(){
-        cout << hakbun_ << endl;
+        cout << hakbun_ << " ";
         cout << name_ << endl;
     }
 
@@ -45,14 +45,16 @@ private:
 
 int main(void) {
     //동적할당 : 메모리는 heap에서 할당. 실행 시 메모리 크기가 정해짐
-    Student* jisu = new Student(2202, "나지수");
-    //정적할당 : 메모리는 Stack에서 할당. 컴파일 시 메모리 크기가 정해짐
-    Student mirim = Student();
+    Student* str = new Student[3]{
+        {2202, "나지수"},
+        {2203, "박지영"},
+        {2215, "추다율"},
+    };
 
-    jisu->show();
-    mirim.show();
+    for(int i = 0; i < 3; i++)
+        str[i].show();
 
-    //동적할당 해제
-    delete jisu;
+    // 배열의 동적할당 해제
+    delete []str;
     return 0;
 }
