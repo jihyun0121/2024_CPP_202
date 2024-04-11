@@ -42,12 +42,15 @@ private:
 };
 
 int main(void) {
-    //동적할당 : 메모리는 heap에서 할당
+    //동적할당 : 메모리는 heap에서 할당. 실행 시 메모리 크기가 정해짐
     Student* jisu = new Student(2202, "나지수");
-    //정적할당 : 메모리는 Stack에서 할당
+    //정적할당 : 메모리는 Stack에서 할당. 컴파일 시 메모리 크기가 정해짐
     Student mirim = Student();
 
     (*jisu).show();
     mirim.show();
+
+    //동적할당 해제
+    delete jisu;
     return 0;
 }
