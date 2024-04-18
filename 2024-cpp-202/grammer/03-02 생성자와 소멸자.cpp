@@ -17,6 +17,11 @@ public:
 
     }
 
+    //소멸자 : 객체가 소멸될 때(메모리에서 지워질 때) 호출되는 함수
+    ~Student(void) {
+        delete []name_;
+    }
+
     void show(void){
         cout << hakbun_ << " ";
         cout << name_ << endl;
