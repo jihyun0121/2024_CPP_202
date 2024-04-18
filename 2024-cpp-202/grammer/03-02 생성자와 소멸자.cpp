@@ -13,6 +13,8 @@ public:
         // '/0'이 들어가기 위해 1byte 공간 하나 더 추가
         name_ = new char[length+1];
 
+        cout << "생성자 호출 완료" << endl;
+
         strcpy(name_, name);
 
     }
@@ -20,6 +22,7 @@ public:
     //소멸자 : 객체가 소멸될 때(메모리에서 지워질 때) 호출되는 함수
     ~Student(void) {
         delete []name_;
+        cout << "소멸자 호출 완료" << endl;
     }
 
     void show(void){
@@ -35,8 +38,11 @@ private:
 int main(void) {
 
     Student* stu = new Student(2213, "조수빈");
-    stu->show();
+    cout << "I'm funny" << endl;
+
     delete stu;
+
+    cout << "I'm happy" << endl;
 
     return 0;
 }
