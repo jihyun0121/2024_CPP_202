@@ -36,7 +36,7 @@ public:
     void show(){
         cout << hakbun_ << " ";
         cout << name_ << endl;
-    }
+    }   
 
 private:
     int hakbun_;
