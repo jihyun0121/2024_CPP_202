@@ -18,8 +18,11 @@ public:
 	}
 
 	//복사생성자
-	Student(const Student& rhs) : hakbun_(rhs.hakbun_), name_(rhs.name_) {
-		cout << "복사생성자 호출 완료" << endl;	
+	Student(const Student& rhs) : hakbun_(rhs.hakbun_) {
+		cout << "복사생성자 호출 완료" << endl;
+		int len = strlen(rhs.name_) + 1;
+		name_ = new char[len];
+		strcpy(name_, rhs.name_);
 	}
 
 	// 소멸자 : 객체가 소멸될 때(메모리에서 지워질 때) 호출되는 함수
