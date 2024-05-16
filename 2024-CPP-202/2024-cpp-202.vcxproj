@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="grammer\03-03 복사 생성자.cpp" />
+    <ClCompile Include="0516\0516monster.cpp" />
+    <ClCompile Include="0516\0516상속예제.cpp" />
+    <ClCompile Include="0516\0516생성자예제.cpp" />
+    <ClCompile Include="0516\0516프랜드예제.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
