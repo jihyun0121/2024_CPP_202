@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="grammer\05-01 상속 기본.cpp">
+    <ClCompile Include="grammer\05-02 상속 예제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
