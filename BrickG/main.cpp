@@ -1,5 +1,35 @@
 #include <SFML/Graphics.hpp>
 
+// Ball 클래스 정의
+class Ball {
+public:
+    sf::CircleShape shape;
+    sf::Vector2f velocity;
+
+    Ball(float mX, float mY) {
+        shape.setPosition(mX, mY);              // 위치
+        shape.setRadius(10.f);                  // 크기
+        shape.setFillColor(sf::Color::Red);     // 색 채우기
+        shape.setOrigin(10.f, 10.f);
+        velocity = { -8.f, -8.f };              // 속도
+    }
+
+    void update() {
+        shape.move(velocity);
+
+        if (left() < 0) velocity.x = 8.f;
+        else if (right() > 800) velocity.x = -8.f;
+
+        if (top() < 0) velocity.y = 8.f;
+        else if (bottom() > 600) velocity.y = -8.f;
+    }
+
+    float left() { return shape.getPosition().x - shape.getRadius(); }
+    float right() { return shape.getPosition().x + shape.getRadius(); }
+    float top() { return shape.getPosition().y - shape.getRadius(); }
+    float bottom() { return shape.getPosition().y + shape.getRadius(); }
+};
+
 int main()
 {
     // 창 생성
@@ -9,7 +39,6 @@ int main()
     // 이벤트 루프 시작
     while (window.isOpen())
     {
-        rectangle.move(0.5f, 0);
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -21,7 +50,7 @@ int main()
         // 화면 지우기
         window.clear(sf::Color::White);
 
-        // 도형 그리기
+        // 그리기
 
         // 화면 업데이트
         window.display();
