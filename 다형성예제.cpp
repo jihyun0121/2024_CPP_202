@@ -10,7 +10,7 @@ public:
 
 	}
 
-	void show() {
+	virtual void show() {
 		cout << "ÀÌ¸§ : " << name_ << endl;
 		cout << "¶¥(¸éÀû) : " << territory_ << endl;
 		cout << "±¹¹Î : " << civil_ << endl;
@@ -32,6 +32,7 @@ public:
 	}
 
 	void show() {
+		Food::show();
 		cout << "¸¶´Ã : " << garlic_ << endl;
 		cout << "°íÃß : " << pepper_ << endl;
 	}
@@ -49,6 +50,7 @@ public:
 	}
 
 	void show() {
+		Food::show();
 		cout << "Á©¶óÆ¾ : " << gelatin_ << endl;
 		cout << "¼³ÅÁ : " << sugar_ << endl;
 	}
@@ -66,6 +68,7 @@ public:
 	}
 
 	void show() {
+		Food::show();
 		cout << "¿ìÀ¯ : " << milk_ << endl;
 		cout << "ÀÀ°íÁ¦ : " << rennet_ << endl;
 	}
