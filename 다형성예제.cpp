@@ -31,7 +31,7 @@ class Kimchi : public Food {
 public:
 	Kimchi(int civil, int force, string name, int territory, int garlic, int pepper)
 		: Food(civil, force, name, territory), garlic_(garlic), pepper_(pepper) {
-
+		ca_ = 0;
 	}
 
 	void show() {
@@ -41,12 +41,17 @@ public:
 	}
 
 	void attack(Food* target) override {
-		target->force_ -= this->force_ * 2;
+		ca_++;
+		if (ca_ % 3 == 0)
+			target->force_ -= this->force_ * 2;
+		else
+			target->force_ -= this->force_;
 	}
 
 public:
 	int garlic_;
 	int pepper_;
+	int ca_;
 };
 
 class Jelly : public Food {
