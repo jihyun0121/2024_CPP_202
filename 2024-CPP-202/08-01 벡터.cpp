@@ -5,6 +5,11 @@ using namespace std;
 
 void main(void) {
 	vector<long long> v;
+
+	//미리 공간을 많이 확보하자
+	v.reserve(100);
+
+	//벡터 추가
 	v.push_back(4);
 	v.push_back(6);
 	v.push_back(4567);
